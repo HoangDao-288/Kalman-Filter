@@ -33,8 +33,14 @@ Where:
 
 ### Update Phase
 Refines the estimate using the latest measurement:
-$$K_k = \frac{P_{k|k-1}}{P_{k|k-1} + R}$$ (Kalman Gain)
+
+**Kalman Gain:**
+$$K_k = \frac{P_{k|k-1}}{P_{k|k-1} + R}$$
+
+**State Update:**
 $$\hat{x}_{k|k} = \hat{x}_{k|k-1} + K_k(z_k - \hat{x}_{k|k-1})$$
+
+**Covariance Update:**
 $$P_{k|k} = (1 - K_k) \cdot P_{k|k-1}$$
 
 Where:
